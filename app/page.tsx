@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Navigation from './components/Navigation';  // ADD THIS LINE
+import Footer from './components/Footer';  // Add this import
 
 interface QuoteData {
   episode: {
@@ -301,6 +302,7 @@ export default function Home() {
         <div className="text-center pt-12 text-gray-600 text-sm">
           <p className="font-bold uppercase tracking-wider">New quote daily • Powered by AI</p>
         </div>
+        <Footer />
       </div>
     </div>
   );

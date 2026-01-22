@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';  // Add this import
 
 interface EpisodeMetadata {
   title: string;
@@ -167,6 +168,8 @@ export default function EpisodesPage() {
           ))}
         </div>
       </div>
+      {/* Instagram Footer */}
+      <Footer />
     </div>
   );
 }

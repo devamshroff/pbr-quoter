@@ -9,6 +9,7 @@ export default function Navigation() {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
   const isEpisodesPage = pathname === '/episodes';
+  const isContactPage = pathname === '/contact';
 
   return (
     <div className="bg-white">
@@ -45,7 +46,6 @@ export default function Navigation() {
       {isHomePage && (
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between px-8">
-            {/* Left - Pineapple Man */}
             <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
               <Image
                 src="/images/pineapple-man-final.jpg"
@@ -56,7 +56,6 @@ export default function Navigation() {
               />
             </div>
             
-            {/* Center - Podcast Logo */}
             <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
               <Image
                 src="/images/podcast-logo.jpg"
@@ -67,7 +66,6 @@ export default function Navigation() {
               />
             </div>
             
-            {/* Right - PBR Text */}
             <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
               <Image
                 src="/images/PBR-text.jpg"
@@ -81,11 +79,10 @@ export default function Navigation() {
         </div>
       )}
 
-      {/* Episodes Page Header with logos on sides */}
+      {/* Episodes Page Header */}
       {isEpisodesPage && (
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between px-8">
-            {/* Left - Pineapple Man */}
             <div className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
               <Image
                 src="/images/pineapple-man-final.jpg"
@@ -96,12 +93,10 @@ export default function Navigation() {
               />
             </div>
             
-            {/* Center - ALL EPISODES text */}
             <h1 className="text-4xl font-black text-gray-900 uppercase tracking-wide">
               All Episodes
             </h1>
             
-            {/* Right - PBR Text */}
             <div className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
               <Image
                 src="/images/PBR-text.jpg"
@@ -113,6 +108,42 @@ export default function Navigation() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* Contact Page Header */}
+      {isContactPage && (
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex items-center justify-between px-8">
+            <div className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
+              <Image
+                src="/images/pineapple-man-final.jpg"
+                alt="Pineapple Man"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            
+            <h1 className="text-4xl font-black text-gray-900 uppercase tracking-wide">
+              Contact Us
+            </h1>
+
+            <div className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
+              <Image
+                src="/images/PBR-text.jpg"
+                alt="PBR"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+          <p className="text-gray-600 text-lg leading-relaxed text-center">
+                Have thoughts? Ideas for us? Want to collaborate?<br />
+                Send us feedback! We'd love to chat.
+            </p>
+        </div>
+        
       )}
     </div>
   );
