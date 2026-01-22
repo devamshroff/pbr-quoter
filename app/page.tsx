@@ -156,7 +156,7 @@ export default function Home() {
   
 
   return (
-    <div className="min-h-screen bg-white py-8 px-4">
+    <div className="min-h-screen bg-white py-4 md:py-8 px-2 md:px-4">
       <Navigation /> 
       <div className="max-w-6xl mx-auto">
 
