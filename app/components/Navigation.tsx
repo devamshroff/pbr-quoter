@@ -44,106 +44,106 @@ export default function Navigation() {
 
       {/* Logos - Homepage layout */}
       {isHomePage && (
-        <div className="max-w-7xl mx-auto px-4 py-4 md:py-6">
-          <div className="flex items-center justify-between px-2 md:px-8">
-            <div className="relative w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0">
-              <Image
+        <div className="max-w-7xl mx-auto px-4 py-6">
+            <div className="flex items-center justify-between px-8">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
+                <Image
                 src="/images/pineapple-man-final.jpg"
                 alt="Pineapple Man"
                 fill
                 className="object-contain"
                 priority
-              />
+                />
             </div>
             
-            <div className="relative w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0">
-              <Image
+            <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
+                <Image
                 src="/images/podcast-logo.jpg"
                 alt="Pineapple Blunt Rotation"
                 fill
                 className="object-contain"
                 priority
-              />
+                />
             </div>
             
-            <div className="relative w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0">
-              <Image
+            <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
+                <Image
                 src="/images/PBR-text.jpg"
                 alt="PBR"
                 fill
                 className="object-contain"
                 priority
-              />
+                />
             </div>
-          </div>
+            </div>
         </div>
-      )}
+        )}
 
-      {/* Episodes Page Header */}
-      {isEpisodesPage && (
-        <div className="max-w-7xl mx-auto px-4 py-4 md:py-6">
-          <div className="flex items-center justify-between px-2 md:px-8">
-            <div className="relative w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 flex-shrink-0">
-              <Image
+        {/* Episodes Page Header */}
+        {isEpisodesPage && (
+        <div className="max-w-7xl mx-auto px-4 py-6">
+            <div className="flex items-center justify-between px-8">
+            <div className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
+                <Image
                 src="/images/pineapple-man-final.jpg"
                 alt="Pineapple Man"
                 fill
                 className="object-contain"
                 priority
-              />
+                />
             </div>
             
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 uppercase tracking-wide text-center">
-              All Episodes
+            <h1 className="text-4xl font-black text-gray-900 uppercase tracking-wide">
+                All Episodes
             </h1>
             
-            <div className="relative w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 flex-shrink-0">
-              <Image
+            <div className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
+                <Image
                 src="/images/PBR-text.jpg"
                 alt="PBR"
                 fill
                 className="object-contain"
                 priority
-              />
+                />
             </div>
-          </div>
+            </div>
         </div>
-      )}
+        )}
 
-      {/* Contact Page Header */}
-      {isContactPage && (
-        <div className="max-w-7xl mx-auto px-4 py-4 md:py-6">
-          <div className="flex items-center justify-between px-2 md:px-8">
-            <div className="relative w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 flex-shrink-0">
-              <Image
+        {/* Contact Page Header */}
+        {isContactPage && (
+        <div className="max-w-7xl mx-auto px-4 py-6">
+            <div className="flex items-center justify-between px-8">
+            <div className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
+                <Image
                 src="/images/pineapple-man-final.jpg"
                 alt="Pineapple Man"
                 fill
                 className="object-contain"
                 priority
-              />
+                />
             </div>
             
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 uppercase tracking-wide text-center">
-              Contact Us
+            <h1 className="text-4xl font-black text-gray-900 uppercase tracking-wide">
+                Contact Us
             </h1>
 
-            <div className="relative w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 flex-shrink-0">
-              <Image
+            <div className="relative w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
+                <Image
                 src="/images/PBR-text.jpg"
                 alt="PBR"
                 fill
                 className="object-contain"
                 priority
-              />
+                />
             </div>
-          </div>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed text-center mt-4 px-4">
+            </div>
+            <p className="text-gray-600 text-lg leading-relaxed text-center mt-4">
             Have thoughts? Ideas for us? Want to collaborate?<br />
             Send us feedback! We'd love to chat.
-          </p>
+            </p>
         </div>
-      )}
+        )}
     </div>
   );
 }
