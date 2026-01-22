@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Navigation from './components/Navigation';  // ADD THIS LINE
 
 interface QuoteData {
   episode: {
@@ -155,42 +156,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white py-8 px-4">
+      <Navigation /> 
       <div className="max-w-6xl mx-auto">
-        
-        {/* Header with Pineapple Man (left) and PBR Text (right) */}
-        <div className="flex items-center justify-between mb-6 px-4">
-          <div className="relative w-20 h-20 md:w-28 md:h-28 flex-shrink-0">
-            <Image
-              src="/images/pineapple-man-final.jpg"
-              alt="Pineapple Man"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-          <div className="relative w-28 h-20 md:w-40 md:h-28 flex-shrink-0">
-            <Image
-              src="/images/PBR-text.jpg"
-              alt="PBR"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Podcast Logo centered */}
-        <div className="flex justify-center mb-8">
-          <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
-            <Image
-              src="/images/podcast-logo.jpg"
-              alt="Pineapple Blunt Rotation"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
 
         {/* "PBR Quote of the Day" */}
         <div className="text-center mb-12">

@@ -5,5 +5,6 @@
   "spotifyUrl": "https://open.spotify.com/episode/2v4OCvGbCZ9rw8U4zSOxTw?si=f64ad3d825b7441a",
   "applePodcastsUrl": "https://podcasts.apple.com/us/podcast/pineapple-blunt-rotation/id1703706417?i=1000629839562",
   "transcribedAt": "2026-01-20T15:07:29.890942",
-  "episodeArt": "public/images/2-anxiety.jpeg"
+  "episodeArt": "public/images/2-anxiety.jpeg",
+  "hosts": "Devam Shroff, Ahir Datta"
 }

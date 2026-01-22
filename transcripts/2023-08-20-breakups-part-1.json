@@ -5,5 +5,6 @@
   "spotifyUrl": "https://open.spotify.com/episode/7ieHlnd5Yd2HGfhgdo1Nig?si=99b8b5cd7d204fb3/",
   "applePodcastsUrl": "https://podcasts.apple.com/us/podcast/pineapple-blunt-rotation/id1703706417?i=1000625210678",
   "transcribedAt": "2026-01-20T15:12:04.202015",
-  "episodeArt": "public/images/podcast-logo.jpeg"
+  "episodeArt": "public/images/podcast-logo.jpeg",
+  "hosts": "Devam Shroff, Ahir Datta"
 }
