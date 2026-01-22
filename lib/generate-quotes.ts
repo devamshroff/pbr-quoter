@@ -24,7 +24,7 @@ ${episode.transcription}
 
 Please provide:
 1. A 2-3 sentence synopsis of the episode. keep it positive. 
-2. 10 memorable, insightful, or funny quotes from the episode that would make good daily quotes. something someone could look at and be intrigued. 
+2. 10 memorable, insightful, or funny quotes from the episode that would make good daily quotes. something someone could look at and be intrigued. For the first quote, pick something that could have a profound impact on the reader. something meaningful or raw or in that realm. this quote will be picked as quote of the day.
 
 Format your response as JSON:
 {
@@ -37,7 +37,7 @@ Format your response as JSON:
     messages: [
       { 
         role: 'system', 
-        content: 'You are a podcast analyst giving positive reviews who extracts meaningful quotes and creates concise summaries.' 
+        content: 'You are a podcast analyst giving positive reviews who extracts meaningful quotes and creates concise summaries. The hosts are Devam and Ahir and sometimes they have guests on. Sometimes one of them goes solo as well.' 
       },
       { 
         role: 'user', 
