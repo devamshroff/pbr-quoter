@@ -6,6 +6,8 @@ interface EpisodeMetadata {
   title: string;
   pubDate: string;
   audioUrl: string;
+  spotifyUrl: string;
+  applePodcastsUrl: string;
   transcribedAt: string;
   episodeArt: string;
 }
@@ -14,6 +16,8 @@ export interface Episode {
     title: string;
     pubDate: string;
     audioUrl: string;
+    spotifyUrl: string;
+    applePodcastsUrl: string;
     transcription: string;
     episodeArt: string;
 }
@@ -41,6 +45,8 @@ export function getRandomEpisode(): Episode {
     title: metadata.title,
     pubDate: metadata.pubDate,
     audioUrl: metadata.audioUrl,
+    spotifyUrl: metadata.spotifyUrl,
+    applePodcastsUrl: metadata.applePodcastsUrl,
     transcription: transcription,
     episodeArt: metadata.episodeArt
   };

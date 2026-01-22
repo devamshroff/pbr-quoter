@@ -30,6 +30,8 @@ async function testGenerateQuotes() {
     title: metadata.title,
     pubDate: metadata.pubDate,
     audioUrl: metadata.audioUrl,
+    spotifyUrl: metadata.spotifyUrl,
+    applePodcastsUrl: metadata.applePodcastsUrl,
     transcription: transcription,
     episodeArt: metadata.episodeArt
   };

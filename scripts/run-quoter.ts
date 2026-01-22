@@ -44,6 +44,8 @@ async function generateDailyQuote() {
       title: episode.title,
       pubDate: episode.pubDate,
       audioUrl: episode.audioUrl,
+      spotifyUrl: episode.spotifyUrl,
+      applePodcastsUrl: episode.applePodcastsUrl,
       episodeArt: episode.episodeArt
     },
     synopsis: quotes.synopsis,

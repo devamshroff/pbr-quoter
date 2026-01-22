@@ -8,6 +8,8 @@ interface QuoteData {
     title: string;
     pubDate: string;
     audioUrl: string;
+    spotifyUrl: string;
+    applePodcastsUrl: string;
     episodeArt?: string;
   };
   synopsis: string;
@@ -132,6 +134,25 @@ export default function Home() {
     'text-amber-900',
   ];
 
+  const SpotifyIcon = ({ className }: { className?: string }) => (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.478 17.318a.748.748 0 01-1.03.246c-2.824-1.726-6.381-2.116-10.57-1.157a.75.75 0 01-.334-1.462c4.57-1.045 8.49-.603 11.622 1.3a.75.75 0 01.312 1.073zm1.472-3.273a.936.936 0 01-1.288.308c-3.234-1.988-8.162-2.566-11.977-1.406a.938.938 0 01-.544-1.794c4.358-1.323 9.771-.682 13.49 1.609a.937.937 0 01.319 1.283zm.127-3.409c-3.876-2.302-10.266-2.514-13.97-1.39a1.125 1.125 0 11-.65-2.154c4.255-1.29 11.318-1.041 15.79 1.598a1.125 1.125 0 11-1.17 1.946z"/>
+    </svg>
+  );
+  
+  const ApplePodcastsIcon = ({ className }: { className?: string }) => (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+      <path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zm0 4.8a2.4 2.4 0 110 4.8 2.4 2.4 0 010-4.8zm0 6.6c1.988 0 3.6 1.612 3.6 3.6v4.2a3.6 3.6 0 11-7.2 0V15c0-1.988 1.612-3.6 3.6-3.6z"/>
+    </svg>
+  );
+
+  const RssIcon = ({ className }: { className?: string }) => (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+      <path d="M4 4a16 16 0 0116 16h-3A13 13 0 004 7V4zm0 6a10 10 0 0110 10h-3a7 7 0 00-7-7v-3zm2.5 7a2.5 2.5 0 11-.001 5.001A2.5 2.5 0 016.5 17z"/>
+    </svg>
+  );
+  
+
   return (
     <div className="min-h-screen bg-white py-8 px-4">
       <div className="max-w-6xl mx-auto">
@@ -237,16 +258,42 @@ export default function Home() {
           </div>
 
           {/* Listen Link */}
-          <div className="text-center">
+          <div className="flex items-center justify-center gap-6 mt-6 flex-wrap">
+            {/* Spotify */}
+            <a
+              href={quoteData.episode.spotifyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-3 rounded-md bg-[#1DB954] text-black font-semibold text-sm hover:bg-[#1ed760] transition shadow-sm"
+            >
+              <SpotifyIcon className="w-5 h-5" />
+              Spotify
+            </a>
+
+            {/* RSS (middle) */}
             <a
               href={quoteData.episode.audioUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 text-white px-8 py-4 rounded-full font-black uppercase tracking-wider text-sm hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="flex items-center gap-3 px-6 py-3 rounded-md border border-blue-600 bg-black text-blue-400 font-semibold text-sm hover:bg-blue-600 hover:text-black transition shadow-sm"
             >
-              🎧 Listen to Full Episode
+              <RssIcon className="w-5 h-5" />
+              RSS Feed
+            </a>
+
+            {/* Apple Podcasts */}
+            <a
+              href={quoteData.episode.applePodcastsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-3 rounded-md bg-[#D60017] text-black font-semibold text-sm hover:bg-[#e6001a] transition shadow-sm"
+            >
+              <ApplePodcastsIcon className="w-5 h-5" />
+              Apple Podcasts
             </a>
           </div>
+
+
         </div>
 
         {/* "More Quotes" Section */}
