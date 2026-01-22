@@ -28,7 +28,7 @@ jobs:
       
       # 4. Generate the daily quote
       - name: Generate daily quote
-        run: bun run scripts/generate-daily-quote.ts
+        run: bun run scripts/run-quoter.ts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       
