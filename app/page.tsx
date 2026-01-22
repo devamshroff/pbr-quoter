@@ -12,7 +12,7 @@ interface QuoteData {
     audioUrl: string;
     spotifyUrl: string;
     applePodcastsUrl: string;
-    episodeArt?: string;
+    episodeArt: string;
   };
   synopsis: string;
   quotes: string[];
