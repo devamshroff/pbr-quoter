@@ -17,19 +17,13 @@ export async function GET() {
     
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const quoteData = JSON.parse(fileContent);
-    // Convert the episodeArt path to be accessible from public folder
-    // If episodeArt is "public/images/podcast-logo.jpeg"
-    // We'll copy it to public and serve it as "/episode-art.jpeg"
+    
+    // Fix the episodeArt path - just replace "public/" with "/"
     if (quoteData.episode.episodeArt) {
-        const artPath = path.join(process.cwd(), quoteData.episode.episodeArt);
-        const publicArtPath = path.join(process.cwd(), 'public', 'episode-art.jpeg');
-        
-        // Copy the image to public folder so it's accessible
-        if (fs.existsSync(artPath)) {
-          fs.copyFileSync(artPath, publicArtPath);
-          quoteData.episode.episodeArt = '/episode-art.jpeg'; // Update to public URL
-        }
+      if (quoteData.episode.episodeArt.startsWith('public/')) {
+        quoteData.episode.episodeArt = quoteData.episode.episodeArt.replace('public/', '/');
       }
+    }
 
     return NextResponse.json(quoteData);
   } catch (error) {
