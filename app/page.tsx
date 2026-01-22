@@ -180,29 +180,16 @@ export default function Home() {
 
           {/* The Main Quote - iMessage style with tail */}
           <div className="flex justify-center px-4">
-            <div className="relative max-w-3xl">
-              {/* Quote bubble */}
-              <div className="bg-blue-500 text-white px-8 py-6 rounded-3xl shadow-lg">
-                <p className="text-2xl md:text-4xl leading-relaxed font-medium">
-                  {currentQuote}
-                </p>
-              </div>
-              {/* iMessage tail on the right */}
-              <svg 
-                className="absolute -right-2 bottom-0" 
-                width="20" 
-                height="20" 
-                viewBox="0 0 20 20"
-              >
-                <path 
-                  d="M0,0 L20,0 L20,20 Q10,10 0,20 Z" 
-                  fill="#3b82f6"
-                  className="fill-blue-500"
-                />
-              </svg>
+          <div className="relative max-w-3xl">
+            {/* Quote bubble */}
+            <div className="bg-blue-500 text-white px-8 py-6 rounded-3xl shadow-lg">
+              <p className="text-2xl md:text-4xl leading-relaxed font-medium">
+                {currentQuote}
+              </p>
             </div>
+            
           </div>
-
+        </div>
           {/* Episode Art */}
           {quoteData.episode.episodeArt && (
             <div className="flex justify-center">
