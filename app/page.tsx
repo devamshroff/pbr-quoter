@@ -187,9 +187,8 @@ export default function Home() {
                 {currentQuote}
               </p>
             </div>
-            
           </div>
-        </div>
+          </div>
           {/* Episode Art */}
           {quoteData.episode.episodeArt && (
             <div className="flex justify-center">

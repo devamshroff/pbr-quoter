@@ -4,7 +4,8 @@ name: Trigger Quote Generation
 on:
   schedule:
     # Runs at 8am PST / 4pm UTC every day
-    - cron: '0 16 * * *'
+    - cron: "0 16 * * *"
+    
   workflow_dispatch:  # Allows manual trigger from GitHub UI
 
 jobs:
@@ -16,6 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
+      - name: Debug time
+        run: date -u
+
       # 2. Setup Bun
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
